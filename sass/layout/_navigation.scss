@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap");
+
+.nav {
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4rem;
+  background: rgb(48, 48, 48);
+
+  .logo {
+    font-family: "Zen Kurenaido", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: $white;
+  }
+
+  &__list {
+    list-style: none;
+
+    @media only screen and (max-width: 48em) {
+      position: fixed;
+      top: 8vh;
+      left: 0;
+      width: 100%;
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-top: 0.5rem solid rgb(172, 172, 172);
+      background: rgb(48, 48, 48);
+      transform: translateY(-140%);
+      transition: transform 0.7s ease;
+      z-index: 100;
+    }
+
+    &--active {
+      transform: translateY(0);
+    }
+  }
+
+  &__item {
+    display: inline-block;
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+
+      @media only screen and (max-width: 48em) {
+        margin-right: 0;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    color: $white;
+    transition: color 0.3s ease;
+
+    @media only screen and (max-width: 48em) {
+      font-size: 2.3rem;
+    }
+
+    &:hover {
+      color: rgb(249, 155, 73);
+    }
+  }
+
+  &__icon {
+    display: none;
+    cursor: pointer;
+
+    @media only screen and (max-width: 48em) {
+      display: block;
+    }
+
+    &--icon {
+      font-size: 2.5rem;
+      color: $white;
+    }
+  }
+}

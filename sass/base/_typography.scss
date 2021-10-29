@@ -1,0 +1,23 @@
+.heading__primary {
+  @include headingProp;
+  font-size: 3rem;
+}
+
+.heading__secondary {
+  @include headingProp;
+  font-size: 2rem;
+}
+
+.heading__tertiary {
+  @include headingProp;
+  font-size: 1.8rem;
+}
+
+.paragraph {
+  font-size: $default-fs;
+  color: $dark--1;
+
+  &--small {
+    font-size: 1.4rem;
+  }
+}

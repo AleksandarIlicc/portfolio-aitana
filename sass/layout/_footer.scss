@@ -1,0 +1,43 @@
+.footer {
+  color: $white;
+  background: rgb(53, 53, 53);
+  @include flexContainer;
+  flex-direction: column;
+
+  & h1 {
+    color: $white;
+  }
+
+  &__content {
+    @include flexContainer;
+    margin-bottom: 5rem;
+  }
+
+  &__copyright {
+    position: relative;
+    width: 100%;
+    padding-top: 4rem;
+    font-size: $default-fs;
+  }
+
+  &__media {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  &__box {
+    background: rgb(89, 89, 89);
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    margin-right: 1.3rem;
+    cursor: pointer;
+
+    @include flexContainer;
+
+    & img {
+      width: 4rem;
+    }
+  }
+}

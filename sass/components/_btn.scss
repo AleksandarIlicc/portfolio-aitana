@@ -1,0 +1,45 @@
+.btn {
+  display: block;
+  width: 15rem;
+  font-size: 1.4rem;
+  letter-spacing: 0.125rem;
+  padding: 1.2rem;
+  color: $white;
+  background: $black;
+  border: none;
+  border-radius: 0.3rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: $shadow--light;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &__orange {
+    background: $orange--light;
+  }
+
+  &__github {
+    color: $red;
+    background: transparent;
+    border: 0.2rem solid $red;
+    transition: background 0.3s ease;
+
+    &:hover {
+      color: $white;
+      background: $red;
+      transform: translateY(0);
+      box-shadow: none;
+    }
+  }
+
+  &__submit {
+    color: $white;
+    background: $red;
+  }
+}

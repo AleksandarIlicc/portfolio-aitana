@@ -1,0 +1,19 @@
+@mixin headingProp {
+  font-family: "Roboto", sans-serif;
+  color: $dark--1;
+}
+
+@mixin flexContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin bottonLine {
+  position: absolute;
+  left: 50%;
+  width: 90%;
+  height: 2px;
+  transform: translateX(-50%);
+  background: $dark--2;
+}

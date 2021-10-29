@@ -1,0 +1,38 @@
+.mb-sm {
+  margin-bottom: 2rem;
+}
+.mb-md {
+  margin-bottom: 3rem;
+}
+.mb-lr {
+  margin-bottom: 4rem;
+}
+.mb-hg {
+  margin-bottom: 8rem;
+}
+.mt-sm {
+  margin-top: 2rem;
+}
+.mt-md {
+  margin-top: 3rem;
+}
+.tx-cnt {
+  text-align: center;
+}
+.flex-container {
+  max-width: 100rem;
+  margin-inline: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media only screen and (max-width: 56.25em) {
+    flex-direction: column;
+  }
+}
+.grid__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: 2rem;
+  row-gap: 3rem;
+}
