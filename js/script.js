@@ -109,3 +109,39 @@ const sectionProjectOptions = {
 
 const sectionProjectObserver = new IntersectionObserver(revealSectionProject, sectionProjectOptions);
 sectionProjectObserver.observe(secitonProject);
+
+const jobEl = document.querySelectorAll('.job');
+const texts = ['Front End Developer', 'UI/UX Designer', '.NET Developer '];
+let arrIndex = 0;
+let letterIndex = 0;
+
+function type() {
+  if (letterIndex < texts[arrIndex].length) {
+    jobEl.forEach(job => {
+        job.textContent += texts[arrIndex].charAt(letterIndex);
+    });
+    letterIndex++;
+    setTimeout(type, 200);
+  } else {
+    setTimeout(() => {
+      setTimeout(erase, 100);
+    }, 1000);
+  }
+}
+
+function erase() {
+  if (letterIndex > 0) {
+    jobEl.forEach(job => {
+        job.textContent = texts[arrIndex].substring(0, letterIndex - 1);
+    });
+    letterIndex--;
+    setTimeout(erase, 100);
+  } else {
+    arrIndex++;
+    if (arrIndex >= texts.length) arrIndex = 0;
+
+    setTimeout(type, 200);
+  }
+}
+
+type();
